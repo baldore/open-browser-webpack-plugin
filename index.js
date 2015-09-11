@@ -1,3 +1,9 @@
-var open = require('open');
+function MyPlugin() {}
 
-open('http://www.google.com');
+MyPlugin.prototype.apply = function(compiler) {
+  console.log(compiler);
+};
+
+module.exports = MyPlugin;
+
+
