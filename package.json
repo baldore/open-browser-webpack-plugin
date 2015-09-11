@@ -24,5 +24,11 @@
   "bugs": {
     "url": "https://github.com/baldore/webpack-open-plugin/issues"
   },
-  "homepage": "https://github.com/baldore/webpack-open-plugin#readme"
+  "homepage": "https://github.com/baldore/webpack-open-plugin#readme",
+  "dependencies": {
+    "open": "0.0.5"
+  },
+  "devDependencies": {
+    "webpack": "^1.12.1"
+  }
 }
