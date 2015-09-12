@@ -1,4 +1,4 @@
-var MyPlugin = require('./index');
+var OpenBrowserPlugin = require('./index');
 
 module.exports = {
   entry: './lib/entry.js',
@@ -7,6 +7,6 @@ module.exports = {
     filename: "bundle.js"
   },
   plugins: [
-    new MyPlugin()
+    new OpenBrowserPlugin()
   ]
 };
