@@ -4,6 +4,7 @@
   "description": "Opens the browser when Webpack is ready serving your files.",
   "main": "index.js",
   "scripts": {
+    "debug": "node fixtures/debug.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

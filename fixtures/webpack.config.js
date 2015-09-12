@@ -1,7 +1,8 @@
-var OpenBrowserPlugin = require('./index');
+var path = require('path');
+var OpenBrowserPlugin = require('../index');
 
 module.exports = {
-  entry: './lib/entry.js',
+  entry: path.resolve(__dirname, 'lib/entry.js'),
   output: {
     path: __dirname + "/bundle/",
     filename: "bundle.js"
