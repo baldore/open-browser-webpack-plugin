@@ -8,6 +8,6 @@ module.exports = {
     filename: "bundle.js"
   },
   plugins: [
-    new OpenBrowserPlugin()
+    new OpenBrowserPlugin({ url: 'http://localhost:3000' })
   ]
 };
