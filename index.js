@@ -22,7 +22,7 @@ function removeFromArray(array, item) {
  */
 function OpenBrowserPlugin(options) {
   options || (options = {});
-  this.url = options.url || false;
+  this.url = options.url || 'http://localhost:8080';
   this.browser = options.browser || DEFAULT_BROWSER;
 }
 
