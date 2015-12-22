@@ -18,6 +18,7 @@ function removeFromArray(array, item) {
  * @param {Object} options Options object.
  * @param {String} options.url url to open in browser.
  * @param {String} [options.browser] Browser to use. If not available, use default browser.
+ * @param {Boolean} [options.ignoreErrors] Ignore webpack errors.
  * @constructor
  */
 function OpenBrowserPlugin(options) {
