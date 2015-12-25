@@ -18,18 +18,21 @@ function removeFromArray(array, item) {
  * @param {Object} options Options object.
  * @param {String} options.url url to open in browser.
  * @param {String} [options.browser] Browser to use. If not available, use default browser.
+ * @param {Boolean} [options.ignoreErrors] Ignore webpack errors.
  * @constructor
  */
 function OpenBrowserPlugin(options) {
   options || (options = {});
   this.url = options.url || 'http://localhost:8080';
   this.browser = options.browser || DEFAULT_BROWSER;
+  this.ignoreErrors = options.ignoreErrors;
 }
 
 OpenBrowserPlugin.prototype.apply = function(compiler) {
   var isWatching = false;
   var url = this.url;
   var browser = this.browser;
+  var ignoreErrors = this.ignoreErrors;
 
   compiler.plugin('watch-run', function checkWatchingMode(watching, done) {
     isWatching = true;
@@ -38,7 +41,7 @@ OpenBrowserPlugin.prototype.apply = function(compiler) {
   });
 
   compiler.plugin('done', function doneCallback(stats) {
-    if (isWatching && !stats.hasErrors()) {
+    if (isWatching && (!stats.hasErrors() || ignoreErrors)) {
       removeFromArray(stats.compilation.compiler._plugins['done'], doneCallback);
       open(url, browser, function(err) {
         if (err) throw err;
