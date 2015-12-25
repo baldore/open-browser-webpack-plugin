@@ -1,7 +1,5 @@
 var open = require('open');
 
-var DEFAULT_BROWSER = undefined;
-
 /**
  * Removes an element from the an array if exist.
  * @param {Array} array
@@ -24,7 +22,7 @@ function removeFromArray(array, item) {
 function OpenBrowserPlugin(options) {
   options || (options = {});
   this.url = options.url || 'http://localhost:8080';
-  this.browser = options.browser || DEFAULT_BROWSER;
+  this.browser = options.browser;
   this.ignoreErrors = options.ignoreErrors;
 }
 
