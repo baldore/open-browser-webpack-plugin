@@ -24,22 +24,22 @@ module.exports = {
 
 #### url
 
-Type: `String`
+Type: `String`<br>
 Default: `http://localhost:8080`
 
 Url to open when Webpack is ready. Needs to have the prefix `http://` or `https://` in order to open the browser.
 
 #### browser
 
-Type: `String`
+Type: `String`<br>
 Optional
 
 Browser to open. By default, it will try to open the browser set by default in your system.
 
 #### ignoreErrors
 
-Type: `String`
-Default: `False`
+Type: `String`<br>
+Default: `False`<br>
 Optional
 
 By default this plugin only opens the browser if there's no Webpack errors. Setting ignoreErrors to true will open a new tab no matter the compilation errors.
