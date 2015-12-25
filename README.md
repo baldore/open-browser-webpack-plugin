@@ -44,6 +44,20 @@ Optional
 
 By default this plugin only opens the browser if there's no Webpack errors. Setting ignoreErrors to true will open a new tab no matter the compilation errors.
 
+## Change Log
+
+### 0.0.2 - ...
+#### Added
+- ignoreErrors option (Thanks to @zhura).
+- Changelog.
+- Documentation for options.
+
+#### Removed
+- DEFAULT_BROWSER constant.
+
+### 0.0.1 - 2015-09-12
+- First release.
+
 ## License
 
 MIT License.
