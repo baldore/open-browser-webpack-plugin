@@ -51,6 +51,7 @@ By default this plugin only opens the browser if there's no Webpack errors. Sett
 - ignoreErrors option (Thanks to @zhura).
 - Changelog.
 - Documentation for options.
+- Tests.
 
 #### Removed
 - DEFAULT_BROWSER constant.
