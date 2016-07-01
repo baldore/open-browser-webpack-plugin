@@ -1,6 +1,6 @@
 {
-  "name": "open-browser-webpack-plugin",
-  "version": "0.0.2",
+  "name": "open-browser-webpack-express-plugin",
+  "version": "0.0.3",
   "description": "Opens the browser when Webpack is ready serving your files.",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/baldore/webpack-open-plugin.git"
+    "url": "git+https://github.com/GallenHu/open-browser-webpack-plugin.git"
   },
   "keywords": [
     "webpack",
@@ -23,9 +23,9 @@
   "author": "Camilo Orrego",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/baldore/webpack-open-plugin/issues"
+    "url": "https://github.com/GallenHu/open-browser-webpack-plugin/issues"
   },
-  "homepage": "https://github.com/baldore/webpack-open-plugin#readme",
+  "homepage": "https://github.com/GallenHu/open-browser-webpack-plugin#readme",
   "dependencies": {
     "open": "0.0.5"
   },
