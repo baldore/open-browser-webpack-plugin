@@ -44,12 +44,11 @@ OpenBrowserPlugin.prototype.apply = function(compiler) {
   compiler.plugin('done', function doneCallback(stats) {
     if (isWatching && (!stats.hasErrors() || ignoreErrors)) {
       removeFromArray(stats.compilation.compiler._plugins['done'], doneCallback);
-      setTimeout(
+      setTimeout(function () {
         open(url, browser, function(err) {
           if (err) throw err;
-        }),
-        delay
-      );
+        });
+      }, delay);
     }
   });
 };
