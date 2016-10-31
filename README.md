@@ -55,6 +55,10 @@ By default this plugin only opens the browser if there's no Webpack errors. Sett
 
 ## Change Log
 
+### 0.0.3 - 2016-10-31
+#### Added
+- delay option (Thanks to @Root-Core)
+
 ### 0.0.2 - 2015-12-26
 #### Added
 - ignoreErrors option (Thanks to @zhura).
@@ -66,10 +70,6 @@ By default this plugin only opens the browser if there's no Webpack errors. Sett
 
 ### 0.0.1 - 2015-09-12
 - First release.
-
-## TODO
-
-- [ ] Add tests.
 
 ## License
 
