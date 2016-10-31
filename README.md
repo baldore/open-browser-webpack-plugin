@@ -29,6 +29,15 @@ Default: `http://localhost:8080`
 
 Url to open when Webpack is ready. Needs to have the prefix `http://` or `https://` in order to open the browser.
 
+#### delay
+
+Type: `Number`<br>
+Default: `0`<br>
+Optional
+
+By default the browser is opened immediately, but this could be too early in some cases (eg. starting a nodeJS server).
+The value is specified in milliseconds.
+
 #### browser
 
 Type: `String`<br>
@@ -38,7 +47,7 @@ Browser to open. By default, it will try to open the browser set by default in y
 
 #### ignoreErrors
 
-Type: `String`<br>
+Type: `Boolean`<br>
 Default: `False`<br>
 Optional
 
