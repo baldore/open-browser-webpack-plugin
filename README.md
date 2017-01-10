@@ -1,6 +1,12 @@
 # Open Browser Webpack Plugin
 Opens a new browser tab when Webpack loads. Very useful if you're lazy and don't want to force yourself to open a new tab when Webpack is ready to play!
 
+## Installation
+
+```
+npm install open-browser-webpack-plugin --save-dev
+```
+
 ## Usage
 
 Simply require the plugin and add it in the **plugins** section:
