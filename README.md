@@ -61,6 +61,10 @@ By default this plugin only opens the browser if there's no Webpack errors. Sett
 
 ## Change Log
 
+### 0.0.4 - 2017-02-19
+#### Fixes
+- Fix issue where other Webpack callbacks were removed. (Thanks to @plemarquand)
+
 ### 0.0.3 - 2016-10-31
 #### Added
 - delay option (Thanks to @Root-Core)
