@@ -1,14 +1,20 @@
 var open = require('open');
 
 /**
- * Removes an element from the an array if exist.
- * @param {Array} array
- * @param {*} item Item to delete
- * @returns {*} removed item if was found. False otherwise.
+ * Creates a function that is restricted to invoking func once.
+ * Repeat calls to the function return the value of the first invocation.
+ * The func is invoked with the this binding and arguments of the created function.
+ * @param {Function} function The function to restrict.
+ * @returns {Function} Returns the new restricted function.
  */
-function removeFromArray(array, item) {
-  var index = array.indexOf(item);
-  return index >= 0 ? array.splice(index, 1) : false;
+function once(fn) {
+  var called = false;
+  return function() {
+    if (!called) {
+      called = true;
+      fn.apply(this, arguments);
+    }
+  }
 }
 
 /**
@@ -34,21 +40,22 @@ OpenBrowserPlugin.prototype.apply = function(compiler) {
   var delay = this.delay;
   var browser = this.browser;
   var ignoreErrors = this.ignoreErrors;
+  var executeOpen = once(function() {
+    setTimeout(function () {
+      open(url, browser, function(err) {
+        if (err) throw err;
+      });
+    }, delay);
+  })
 
-  compiler.plugin('watch-run', function checkWatchingMode(watching, done) {
+  compiler.plugin('watch-run', once(function checkWatchingMode(watching, done) {
     isWatching = true;
-    removeFromArray(watching.compiler._plugins['watch-run'], checkWatchingMode);
     done();
-  });
+  }));
 
   compiler.plugin('done', function doneCallback(stats) {
     if (isWatching && (!stats.hasErrors() || ignoreErrors)) {
-      removeFromArray(stats.compilation.compiler._plugins['done'], doneCallback);
-      setTimeout(function () {
-        open(url, browser, function(err) {
-          if (err) throw err;
-        });
-      }, delay);
+      executeOpen();
     }
   });
 };
