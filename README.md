@@ -61,6 +61,10 @@ By default this plugin only opens the browser if there's no Webpack errors. Sett
 
 ## Change Log
 
+### 0.0.5 - 2017-03-09
+#### Fixes
+- Fix issue where the compilation never ends. (Thanks to @vkalinichev)
+
 ### 0.0.4 - 2017-02-19
 #### Fixes
 - Fix issue where other Webpack callbacks were removed. (Thanks to @plemarquand)
