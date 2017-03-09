@@ -48,10 +48,10 @@ OpenBrowserPlugin.prototype.apply = function(compiler) {
     }, delay);
   })
 
-  compiler.plugin('watch-run', once(function checkWatchingMode(watching, done) {
+  compiler.plugin('watch-run', function checkWatchingMode(watching, done) {
     isWatching = true;
     done();
-  }));
+  });
 
   compiler.plugin('done', function doneCallback(stats) {
     if (isWatching && (!stats.hasErrors() || ignoreErrors)) {
