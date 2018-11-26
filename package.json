@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ekelvin/webpack-open-plugin.git"
+    "url": "git+https://github.com/baldore/webpack-open-plugin.git"
   },
   "keywords": [
     "webpack",
@@ -24,9 +24,9 @@
   "author": "Camilo Orrego",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ekelvin/webpack-open-plugin/issues"
+    "url": "https://github.com/baldore/webpack-open-plugin/issues"
   },
-  "homepage": "https://github.com/ekelvin/webpack-open-plugin#readme",
+  "homepage": "https://github.com/baldore/webpack-open-plugin#readme",
   "dependencies": {
     "opn": "^5.4.0"
   },
