@@ -1,4 +1,4 @@
-var open = require('open');
+var open = require('opn');
 
 /**
  * Creates a function that is restricted to invoking func once.
