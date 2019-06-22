@@ -1,4 +1,4 @@
-var open = require('open');
+var open = require("open");
 
 /**
  * Creates a function that is restricted to invoking func once.
@@ -14,7 +14,7 @@ function once(fn) {
       called = true;
       fn.apply(this, arguments);
     }
-  }
+  };
 }
 
 /**
@@ -28,7 +28,7 @@ function once(fn) {
  */
 function OpenBrowserPlugin(options) {
   options || (options = {});
-  this.url = options.url || 'http://localhost:8080';
+  this.url = options.url || "http://localhost:8080";
   this.delay = options.delay || 0;
   this.browser = options.browser;
   this.ignoreErrors = options.ignoreErrors;
@@ -41,19 +41,19 @@ OpenBrowserPlugin.prototype.apply = function(compiler) {
   var browser = this.browser;
   var ignoreErrors = this.ignoreErrors;
   var executeOpen = once(function() {
-    setTimeout(function () {
+    setTimeout(function() {
       open(url, browser, function(err) {
         if (err) throw err;
       });
     }, delay);
-  })
+  });
 
-  compiler.plugin('watch-run', function checkWatchingMode(watching, done) {
+  compiler.hooks("watch-run", function checkWatchingMode(watching, done) {
     isWatching = true;
     done();
   });
 
-  compiler.plugin('done', function doneCallback(stats) {
+  compiler.hooks("done", function doneCallback(stats) {
     if (isWatching && (!stats.hasErrors() || ignoreErrors)) {
       executeOpen();
     }
