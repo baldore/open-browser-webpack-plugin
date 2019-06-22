@@ -34,7 +34,7 @@ function OpenBrowserPlugin(options) {
   this.ignoreErrors = options.ignoreErrors;
 }
 
-OpenBrowserPlugin.prototype.apply = function(compiler) {
+OpenBrowserPlugin.prototype.hooks = function(compiler) {
   var isWatching = false;
   var url = this.url;
   var delay = this.delay;
@@ -48,12 +48,12 @@ OpenBrowserPlugin.prototype.apply = function(compiler) {
     }, delay);
   });
 
-  compiler.hooks("watch-run", function checkWatchingMode(watching, done) {
+  compiler.plugin("watch-run", function checkWatchingMode(watching, done) {
     isWatching = true;
     done();
   });
 
-  compiler.hooks("done", function doneCallback(stats) {
+  compiler.plugin("done", function doneCallback(stats) {
     if (isWatching && (!stats.hasErrors() || ignoreErrors)) {
       executeOpen();
     }
