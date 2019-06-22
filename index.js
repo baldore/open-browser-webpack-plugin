@@ -34,7 +34,7 @@ function OpenBrowserPlugin(options) {
   this.ignoreErrors = options.ignoreErrors;
 }
 
-OpenBrowserPlugin.prototype.hooks = function(compiler) {
+OpenBrowserPlugin.prototype.apply = function(compiler) {
   var isWatching = false;
   var url = this.url;
   var delay = this.delay;
