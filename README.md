@@ -1,3 +1,11 @@
+# THIS PACKAGE IS NOT MAINTAINED ANYMORE
+
+Honestly, I started with this just for fun without thinking in the maintenance and I'm really busy with other projects. However, not responding to any request is unrespectful. My apologies for that.
+
+If somebody want to take the ownership of this project, let me know.
+
+Before that, take in consideration that Webpack has evolved a lot and it has the ability to open a page without plugins. Maybe that's enough for your project.
+
 # Open Browser Webpack Plugin
 Opens a new browser tab when Webpack loads. Very useful if you're lazy and don't want to force yourself to open a new tab when Webpack is ready to play!
 
