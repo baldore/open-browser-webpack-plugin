@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/baldore/webpack-open-plugin#readme",
   "dependencies": {
-    "open": "0.0.5"
+    "opn": "^5.3.0"
   },
   "devDependencies": {
     "webpack": "^1.12.1"
