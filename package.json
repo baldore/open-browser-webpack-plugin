@@ -1,6 +1,6 @@
 {
   "name": "open-browser-webpack-plugin",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Opens the browser when Webpack is ready serving your files.",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,7 @@
     "plugin",
     "browser",
     "tab",
-    "open",
+    "opn",
     "ready",
     "improvement"
   ],
@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/baldore/webpack-open-plugin#readme",
   "dependencies": {
-    "open": "0.0.5"
+    "opn": "^5.4.0"
   },
   "devDependencies": {
     "webpack": "^1.12.1"
